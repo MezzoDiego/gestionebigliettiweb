@@ -9,4 +9,5 @@ public interface BigliettoService {
 	// questo mi serve per injection
 		public void setBigliettoDAO(BigliettoDAO bigliettoDAO);
 		public List<Biglietto> listAll() throws Exception;
+		public void inserisciNuovo(Biglietto bigliettoInstance) throws Exception;
 }

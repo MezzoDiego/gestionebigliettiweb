@@ -52,7 +52,7 @@
 				      <div class="container-fluid py-5">
 				        <h1 class="display-5 fw-bold">Benvenuto alla Gestione Biglietti</h1>
 				        <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. </p>
-				        <a class="btn btn-danger btn-lg" href="ListArticoliServlet">Lista Elementi</a>
+				        <a class="btn btn-danger btn-lg" href="ListBigliettiServlet">Lista Elementi</a>
 				      </div>
 			    </div>
 			    
