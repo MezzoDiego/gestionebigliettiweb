@@ -28,7 +28,10 @@ public class BigliettoDAOImpl implements BigliettoDAO {
 
 	@Override
 	public void update(Biglietto input) throws Exception {
-		// TODO Auto-generated method stub
+		if(input == null)
+			throw new RuntimeException("Problema valore in input");
+		
+		entityManager.merge(input);
 		
 	}
 

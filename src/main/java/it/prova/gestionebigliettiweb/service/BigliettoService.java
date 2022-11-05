@@ -12,4 +12,5 @@ public interface BigliettoService {
 		public void inserisciNuovo(Biglietto bigliettoInstance) throws Exception;
 		public Biglietto caricaSingoloElemento(Long id) throws Exception;
 		public void rimuovi(Long id) throws Exception;
+		public void aggiorna(Biglietto bigliettoInstance) throws Exception;
 }

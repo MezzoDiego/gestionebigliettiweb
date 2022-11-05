@@ -7,7 +7,7 @@
 	 	<!-- Common imports in pages -->
 	 	<jsp:include page="../header.jsp" />
 	   
-	   <title>Eliminazione articolo</title>
+	   <title>Eliminazione biglietto</title>
 	 </head>
 	   <body class="d-flex flex-column h-100">
 	   

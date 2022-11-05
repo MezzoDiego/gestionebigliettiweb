@@ -11,7 +11,7 @@ import it.prova.gestionebigliettiweb.model.Biglietto;
 
 public class UtilityBigliettoForm {
 
-	public static Biglietto createBigliettoFromParams(String idParam, String provenienzaParam, String destinazioneParam,
+	public static Biglietto createBigliettoFromParamsConId(String idParam, String provenienzaParam, String destinazioneParam,
 			String dataParam, String prezzoParam) {
 		Biglietto result = new Biglietto(provenienzaParam, destinazioneParam);
 
