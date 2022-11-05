@@ -7,7 +7,7 @@
 		<!-- Custom styles per le features di bootstrap 'Columns with icons' -->
 	   <link href="./assets/css/features.css" rel="stylesheet">
 	   
-	   <title>Gestione Articoli</title>
+	   <title>Gestione Biglietti</title>
 	 </head>
 	   <body class="d-flex flex-column h-100">
 	   		

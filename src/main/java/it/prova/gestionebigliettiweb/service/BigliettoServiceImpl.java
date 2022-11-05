@@ -134,4 +134,23 @@ public class BigliettoServiceImpl implements BigliettoService {
 
 	}
 
+	@Override
+	public List<Biglietto> ricerca(Biglietto bigliettoInstance) throws Exception {
+		// questo è come una connection
+		EntityManager entityManager = LocalEntityManagerFactoryListener.getEntityManager();
+
+		try {
+			// uso l'injection per il dao
+			bigliettoDAO.setEntityManager(entityManager);
+
+			// eseguo quello che realmente devo fare
+			return bigliettoDAO.search(bigliettoInstance);
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+		} finally {
+			LocalEntityManagerFactoryListener.closeEntityManager(entityManager);
+		}
+	}
+
 }

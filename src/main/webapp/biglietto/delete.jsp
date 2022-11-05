@@ -48,12 +48,12 @@
 					    	</dl>
 					    	
 					    </div>
-					    
+					    <form action="ExecuteDeleteBigliettoServlet" method="post">
 					    <div class='card-footer'>
 					        <a href="ListBigliettiServlet" class='btn btn-outline-secondary' style='width:80px'>
 					            <i class='fa fa-chevron-left'></i> Back
 					        </a>
-					         <form action="ExecuteDeleteBigliettoServlet" method="post">
+					         
 					         		<input type="submit" class="btn btn-danger" value="Rimuovi">
 					         		<input type="hidden" name="idDaInviareComeParametro" value="<%= bigliettoInPagina.getId() %>">
 					         </form>
