@@ -8,10 +8,17 @@ import it.prova.gestionebigliettiweb.model.Biglietto;
 
 public class BigliettoDAOImpl implements BigliettoDAO {
 
+	private EntityManager entityManager;
+	
+	@Override
+	public void setEntityManager(EntityManager entityManager) {
+		this.entityManager = entityManager;
+		
+	}
+	
 	@Override
 	public List<Biglietto> list() throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		return entityManager.createQuery("from Biglietto", Biglietto.class).getResultList();
 	}
 
 	@Override
@@ -34,12 +41,6 @@ public class BigliettoDAOImpl implements BigliettoDAO {
 
 	@Override
 	public void delete(Biglietto input) throws Exception {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void setEntityManager(EntityManager entityManager) {
 		// TODO Auto-generated method stub
 		
 	}
