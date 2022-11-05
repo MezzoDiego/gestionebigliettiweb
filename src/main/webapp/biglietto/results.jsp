@@ -65,7 +65,7 @@
 				                        <td><%=item.getData()!=null? new SimpleDateFormat("dd/MM/yyyy").format(item.getData()):"N.D." %></td>
 				                        <td><%=item.getPrezzo() %></td>
 				                        <td>
-											<a class="btn  btn-sm btn-outline-secondary" href="ExecuteVisualizzaBigliettoServlet?idBiglietto=<%=item.getId() %>">Visualizza</a>
+											<a class="btn  btn-sm btn-outline-secondary" href="ExecuteShowBigliettoServlet?idBiglietto=<%=item.getId() %>">Visualizza</a>
 											<a class="btn  btn-sm btn-outline-primary ml-2 mr-2" href="PrepareUpdateBigliettoServlet?idBiglietto=<%=item.getId() %>">Edit</a>
 											<a class="btn btn-outline-danger btn-sm" href="PrepareDeleteBigliettooServlet?idBiglietto=<%=item.getId() %>">Delete</a>
 										</td>

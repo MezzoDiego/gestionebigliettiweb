@@ -23,8 +23,7 @@ public class BigliettoDAOImpl implements BigliettoDAO {
 
 	@Override
 	public Biglietto findOne(Long id) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		return entityManager.find(Biglietto.class, id);
 	}
 
 	@Override

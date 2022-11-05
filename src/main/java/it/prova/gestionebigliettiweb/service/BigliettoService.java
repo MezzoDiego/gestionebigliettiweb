@@ -10,4 +10,5 @@ public interface BigliettoService {
 		public void setBigliettoDAO(BigliettoDAO bigliettoDAO);
 		public List<Biglietto> listAll() throws Exception;
 		public void inserisciNuovo(Biglietto bigliettoInstance) throws Exception;
+		public Biglietto caricaSingoloElemento(Long id) throws Exception;
 }
