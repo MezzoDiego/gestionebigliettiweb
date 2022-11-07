@@ -1,3 +1,4 @@
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!doctype html>
 <html lang="it" class="h-100" >
 	 <head>
@@ -9,7 +10,7 @@
 	   
 	   <title>Gestione Biglietti</title>
 	 </head>
-	   <body class="d-flex flex-column h-100 bg-opacity-50" style="background-image: url('./assets/img/stazione.jpg'); background-size: cover; background-repeat: no-repeat;">
+	   <body class="d-flex flex-column h-100 bg-opacity-50" style="background-image: url('${pageContext.request.contextPath }/assets/img/stazione.jpg'); background-size: cover; background-repeat: no-repeat;">
 	   		
 	   		<!-- #####################################  -->
 	   		<!-- elementi grafici per le features in basso  -->
@@ -47,15 +48,27 @@
 				  ${errorMessage}
 				  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" ></button>
 				</div>
-			    
+				
+				<c:if test="${userInfo.isAdmin()==false}">
+			     <div class="p-5 mb-4 bg-light rounded-3 bg-opacity-50 text-dark fw-bold">
+				      <div class="container-fluid py-5">
+				        <h1 class="display-5 fw-bold">Benvenuto alla Gestione Biglietti</h1>
+				        <p class="col-md-8 fs-5">Questo sito permette di mostrare tutti i biglietti presenti sulla base di dati, visualizzarli al dettaglio e infine, ricercarli. </p>
+				        <a class="btn btn-danger btn-lg" href="${pageContext.request.contextPath }/ListBigliettiServlet">Lista Elementi</a>
+				      </div>
+			    </div>
+			   		  </c:if>
+				
+			   		 <c:if test="${userInfo.isAdmin()==true}">
 			     <div class="p-5 mb-4 bg-light rounded-3 bg-opacity-50 text-dark fw-bold">
 				      <div class="container-fluid py-5">
 				        <h1 class="display-5 fw-bold">Benvenuto alla Gestione Biglietti</h1>
 				        <p class="col-md-8 fs-5">Questo sito permette di mostrare tutti i biglietti presenti sulla base di dati, inserirne dei nuovi, modificarli, eliminarli, visualizzarli al dettaglio e infine, ricercarli. </p>
-				        <a class="btn btn-danger btn-lg" href="ListBigliettiServlet">Lista Elementi</a>
+				        <a class="btn btn-danger btn-lg" href="${pageContext.request.contextPath }/ListBigliettiServlet">Lista Elementi</a>
 				      </div>
 			    </div>
-			    
+			   		 
+			   		 
 			  </div>
 			  
 			  <!--  features di bootstrap 'Columns with icons'  -->
@@ -67,7 +80,7 @@
 			        </div>
 			        <h2>Lista Elementi</h2>
 			        <p>Clicca sul link sottostante per visualizzare tutti i biglietti presenti sulla base dati.</p>
-			        <a href="ListBigliettiServlet" class="icon-link">
+			        <a href="${pageContext.request.contextPath }/ListBigliettiServlet" class="icon-link">
 			          Vai alla funzionalità
 			          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
 			        </a>
@@ -78,7 +91,7 @@
 			        </div>
 			        <h2>Inserisci Nuovo</h2>
 			        <p>Clicca sul link sottostante per inserire un nuovo biglietto.</p>
-			        <a href="PrepareInsertBigliettoServlet" class="icon-link">
+			        <a href="${pageContext.request.contextPath }/admin/PrepareInsertBigliettoServlet" class="icon-link">
 			          Vai alla funzionalità
 			          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
 			        </a>
@@ -89,14 +102,14 @@
 			        </div>
 			        <h2>Ricerca</h2>
 			        <p>Clicca sul link sottostante per cercare uno o piu' biglietti presenti sulla base dati.</p>
-			        <a href="PrepareSearchBigliettoServlet" class="icon-link">
+			        <a href="${pageContext.request.contextPath }/PrepareSearchBigliettoServlet" class="icon-link">
 			          Vai alla funzionalità
 			          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
 			        </a>
 			      </div>
 			    </div>
 			  </div>
-			  
+			  </c:if>
 			</main>
 			
 			<!-- Footer -->

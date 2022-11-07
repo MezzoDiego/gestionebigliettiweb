@@ -31,7 +31,7 @@
 					  Aggiungere d-none nelle class per non far apparire
 					   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" ></button>
 					</div>
-			  
+			  <br><br>
 			  <div class='card'>
 				    <div class='card-header'>
 				        <h5>Modifica Biglietto</h5> 
@@ -41,7 +41,7 @@
 							<h6 class="card-title">I campi con <span class="text-danger">*</span> sono obbligatori</h6>
 		
 		
-							<form method="post" action="ExecuteUpdateBigliettoServlet" class="row g-3" novalidate="novalidate">
+							<form method="post" action="${pageContext.request.contextPath }/admin/ExecuteUpdateBigliettoServlet" class="row g-3" novalidate="novalidate">
 							
 								<div class="col-md-6">
 									<label for="provenienza" class="form-label">Provenienza <span class="text-danger">*</span></label>

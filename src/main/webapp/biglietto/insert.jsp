@@ -32,7 +32,7 @@
 					<div class="alert alert-info alert-dismissible fade show d-none" role="alert">
 					  Aggiungere d-none nelle class per non far apparire
 					   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" ></button>
-					</div>
+					</div><br><br>
 			  
 			  <div class='card'>
 				    <div class='card-header'>

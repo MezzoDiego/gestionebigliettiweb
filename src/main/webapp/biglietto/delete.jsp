@@ -18,7 +18,7 @@
 			<!-- Begin page content -->
 			<main class="flex-shrink-0">
 			  <div class="container">
-			  
+			  <br><br>
 			  		<div class='card'>
 					    <div class='card-header'>
 					        <h5>Sicuro di voler eliminare questo biglietto?</h5>
@@ -46,9 +46,9 @@
 					    	</dl>
 					    	
 					    </div>
-					    <form action="ExecuteDeleteBigliettoServlet" method="post">
+					    <form action="${pageContext.request.contextPath }/admin/ExecuteDeleteBigliettoServlet" method="post">
 					    <div class='card-footer'>
-					        <a href="ListBigliettiServlet" class='btn btn-outline-secondary' style='width:80px'>
+					        <a href="${pageContext.request.contextPath }/ListBigliettiServlet" class='btn btn-outline-secondary' style='width:80px'>
 					            <i class='fa fa-chevron-left'></i> Back
 					        </a>
 					         
