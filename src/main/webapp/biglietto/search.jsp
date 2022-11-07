@@ -1,6 +1,4 @@
 <!doctype html>
-<%@page import="java.text.SimpleDateFormat"%>
-<%@page import="it.prova.gestionebigliettiweb.model.Biglietto"%>
 <html lang="it" class="h-100" >
 	 <head>
 	 

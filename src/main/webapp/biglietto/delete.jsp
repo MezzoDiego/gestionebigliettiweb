@@ -1,6 +1,6 @@
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!doctype html>
-<%@page import="java.text.SimpleDateFormat"%>
-<%@page import="it.prova.gestionebigliettiweb.model.Biglietto"%>
 <html lang="it" class="h-100" >
 	 <head>
 	 
@@ -23,28 +23,26 @@
 					    <div class='card-header'>
 					        <h5>Sicuro di voler eliminare questo biglietto?</h5>
 					    </div>
-					     <% Biglietto bigliettoInPagina = (Biglietto)request.getAttribute("bigliettoDaEliminare"); %>
-					    
 					
 					    <div class='card-body'>
 					    	<dl class="row">
 							  <dt class="col-sm-3 text-right">Provenienza:</dt>
-							  <dd class="col-sm-9"><%=bigliettoInPagina.getProvenienza() %></dd>
+							  <dd class="col-sm-9">${bigliettoDaEliminare.provenienza}</dd>
 					    	</dl>
 					    	
 					    	<dl class="row">
-							  <dt class="col-sm-3 text-right">Descrizione:</dt>
-							  <dd class="col-sm-9"><%=bigliettoInPagina.getDestinazione() %></dd>
+							  <dt class="col-sm-3 text-right">Destinazione:</dt>
+							  <dd class="col-sm-9">${bigliettoDaEliminare.destinazione}</dd>
 					    	</dl>
-					    	
+					    	<fmt:formatDate value="${bigliettoDaEliminare.data}" pattern="dd-MM-yyyy" var="dataFormatted"/>
 					    	<dl class="row">
 							  <dt class="col-sm-3 text-right">Data:</dt>
-							  <dd class="col-sm-9"><%=bigliettoInPagina.getData()!=null? new SimpleDateFormat("dd/MM/yyyy").format(bigliettoInPagina.getData()):"N.D."  %></dd>
+							  <dd class="col-sm-9">${dataFormatted}</dd>
 					    	</dl>
 					    	
 					    	<dl class="row">
 							  <dt class="col-sm-3 text-right">Prezzo:</dt>
-							  <dd class="col-sm-9"><%=bigliettoInPagina.getPrezzo() %></dd>
+							  <dd class="col-sm-9">${bigliettoDaEliminare.prezzo}</dd>
 					    	</dl>
 					    	
 					    </div>
@@ -55,7 +53,7 @@
 					        </a>
 					         
 					         		<input type="submit" class="btn btn-danger" value="Rimuovi">
-					         		<input type="hidden" name="idDaInviareComeParametro" value="<%= bigliettoInPagina.getId() %>">
+					         		<input type="hidden" name="idDaInviareComeParametro" value="${bigliettoDaEliminare.id}">
 					         </form>
 					    </div>
 					<!-- end card -->

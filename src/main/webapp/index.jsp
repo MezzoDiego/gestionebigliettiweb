@@ -9,7 +9,7 @@
 	   
 	   <title>Gestione Biglietti</title>
 	 </head>
-	   <body class="d-flex flex-column h-100">
+	   <body class="d-flex flex-column h-100 bg-opacity-50" style="background-image: url('./assets/img/stazione.jpg'); background-size: cover; background-repeat: no-repeat;">
 	   		
 	   		<!-- #####################################  -->
 	   		<!-- elementi grafici per le features in basso  -->
@@ -48,10 +48,10 @@
 				  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" ></button>
 				</div>
 			    
-			     <div class="p-5 mb-4 bg-light rounded-3">
+			     <div class="p-5 mb-4 bg-light rounded-3 bg-opacity-50 text-dark fw-bold">
 				      <div class="container-fluid py-5">
 				        <h1 class="display-5 fw-bold">Benvenuto alla Gestione Biglietti</h1>
-				        <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. </p>
+				        <p class="col-md-8 fs-5">Questo sito permette di mostrare tutti i biglietti presenti sulla base di dati, inserirne dei nuovi, modificarli, eliminarli, visualizzarli al dettaglio e infine, ricercarli. </p>
 				        <a class="btn btn-danger btn-lg" href="ListBigliettiServlet">Lista Elementi</a>
 				      </div>
 			    </div>
@@ -61,34 +61,34 @@
 			  <!--  features di bootstrap 'Columns with icons'  -->
 			  <div class="container px-4 py-5" id="featured-3">
 			    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-			      <div class="feature col">
+			      <div class="feature col bg-light text-dark fw-bold bg-opacity-50">
 			        <div class="feature-icon bg-danger bg-gradient">
 			          <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"/></svg>
 			        </div>
 			        <h2>Lista Elementi</h2>
-			        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+			        <p>Clicca sul link sottostante per visualizzare tutti i biglietti presenti sulla base dati.</p>
 			        <a href="ListBigliettiServlet" class="icon-link">
 			          Vai alla funzionalità
 			          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
 			        </a>
 			      </div>
-			      <div class="feature col">
+			      <div class="feature col bg-dark text-light fw-bold bg-opacity-75">
 			        <div class="feature-icon bg-danger bg-gradient">
 			          <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
 			        </div>
 			        <h2>Inserisci Nuovo</h2>
-			        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+			        <p>Clicca sul link sottostante per inserire un nuovo biglietto.</p>
 			        <a href="PrepareInsertBigliettoServlet" class="icon-link">
 			          Vai alla funzionalità
 			          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
 			        </a>
 			      </div>
-			      <div class="feature col">
+			      <div class="feature col bg-light text-dark fw-bold bg-opacity-50">
 			        <div class="feature-icon bg-danger bg-gradient">
 			          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
 			        </div>
 			        <h2>Ricerca</h2>
-			        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+			        <p>Clicca sul link sottostante per cercare uno o piu' biglietti presenti sulla base dati.</p>
 			        <a href="PrepareSearchBigliettoServlet" class="icon-link">
 			          Vai alla funzionalità
 			          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
